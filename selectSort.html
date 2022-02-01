@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>选择排序</title>
+  <script>
+    const arr = [3, 2, 1, 4, 5]
+    let len = arr.length;
+    let minInd, temp
+    for (let i = 0; i < len - 1; i++) {
+      minInd = i;
+      for (let j = i + 1; j < len; j++) {
+        if (arr[j] < arr[minInd]) {
+          minInd = j
+        }
+      }
+      temp = arr[i]
+      arr[i] = arr[minInd]
+      arr[minInd] = temp
+    }
+    console.log(arr)
+    
+
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

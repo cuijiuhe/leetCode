@@ -43,26 +43,52 @@
             
         // };
 
-        var twoSum = function(nums, target) {
-            let res = {}
-            for (let i = 0; i < nums.length; i++) {
-                console.log(res[nums[i]])
-                if (res[nums[i]] !== undefined) {
+    //     var twoSum = function(nums, target) {
+    //         let res = {}
+    //         for (let i = 0; i < nums.length; i++) {
+    //             console.log(res[nums[i]])
+    //             if (res[nums[i]] !== undefined) {
                     
-                    return [nums[i], res[nums[i]]]
-                } else {
-                    res[target - nums[i]] = nums[i]
-                }
-            }
-            return []
-        }
+    //                 return [nums[i], res[nums[i]]]
+    //             } else {
+    //                 res[target - nums[i]] = nums[i]
+    //             }
+    //         }
+    //         return []
+    //     }
 
         
-        let nums = [2,15,11,7];
-        let target = 9;
+    //     let nums = [2,15,11,7];
+    //     let target = 9;
 
-       let resault = twoSum(nums, target);
-       console.log(resault)
+    //    let resault = twoSum(nums, target);
+    //    console.log(resault)
+
+    let obj = {
+        a: 1,
+        b: 2
+    }
+    let a = 'a'
+    if (a in obj) {
+        console.log(a in obj)
+    }
+
+    let toSum = function(nums, target) {
+        let obj = {}
+        for(let i = 0; i < nums.length; i++) {
+            let num = nums[i]
+            let n = target - num
+            if (num in obj) {
+                console.log(i, obj[num],  '*')
+                console.log(i)
+            } else {
+                obj[n] = i
+                console.log(obj, i)
+            }
+        }
+    }
+
+    toSum([1,4,6,8,5,8], 11)
 
     </script>
 </body>
